@@ -1,0 +1,12 @@
+kafkaConfig:
+  brokers:
+  -  'localhost:36715'
+pluginName: 'core-pipeline-output'
+pluginManagerUrl: 'https://plugin_template_url'
+priority: 100
+type: 'parallel'
+
+esConfig:
+  url: "http://localhost:35355"
+  username: "elastic"
+  password: "password"
