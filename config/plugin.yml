@@ -1,0 +1,5 @@
+plugin:
+  name: 'core-pipeline-output'
+  priority: 100
+  type: 'parallel'
+  callback_url: '/topics'

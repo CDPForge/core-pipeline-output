@@ -8,7 +8,7 @@ const restEP = new RestEP(async (body: { inputTopic: string, outputTopic: string
   await stage.restart(body.inputTopic, body.outputTopic);
 });
 const pluginRegistrationBody = {
-  name: Config.getInstance().config.pluginName,
+  name: Config.getInstance().config.plugin.name,
   priority: Config.getInstance().config.priority,
   type: Config.getInstance().config.type,
 };

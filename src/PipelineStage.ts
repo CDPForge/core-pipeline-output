@@ -17,10 +17,10 @@ export default class PipelineSTage{
     constructor(plugin: PipelinePluginI) {
         this.plugin = plugin;
         this.kafka = new Kafka({
-          clientId: Config.getInstance().config.pluginName + `plugin-${podName}`,
+          clientId: Config.getInstance().config.plugin.name + `plugin-${podName}`,
           brokers: Config.getInstance().config.kafkaConfig.brokers,
         });
-        this.consumer = this.kafka.consumer({ groupId: Config.getInstance().config.pluginName + `plugin` });
+        this.consumer = this.kafka.consumer({ groupId: Config.getInstance().config.plugin.name + `plugin` });
         this.producer = this.kafka.producer();
         this.input = null;
         this.output = null;
