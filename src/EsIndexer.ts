@@ -1,7 +1,5 @@
 import { Client } from '@elastic/elasticsearch';
-import Config from '../config';
-import { Log } from '../types';
-import PipelinePluginI from './PipelinePluginI';
+import { PipelinePluginI, Log, Config } from 'plugin-pipeline-sdk';
 
 const prefixIndex = "users-logs-";
 
@@ -13,8 +11,8 @@ export default class EsIndexer implements PipelinePluginI{
   private timeoutId: NodeJS.Timeout | null;
   private isProcessing: boolean;
 
-  constructor(batchSize: number = 100, timeout: number = 500) {
-    const esConfig = Config.getInstance().config.esConfig;
+  constructor( config: Config, batchSize: number = 100, timeout: number = 500) {
+    const esConfig = config.esConfig;
     
     const auth = esConfig.username && esConfig.password
       ? { username: esConfig.username, password: esConfig.password }
@@ -94,6 +92,10 @@ export default class EsIndexer implements PipelinePluginI{
   public async elaborate(log: Log): Promise<Log | null> {
     await this.sendLog(log);
     return log;
+  }
+
+  public async init(): Promise<void> {
+    return Promise.resolve();
   }
 
 }
