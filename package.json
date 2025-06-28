@@ -1,5 +1,5 @@
 {
-    "name": "plugin-pipeline-template",
+    "name": "@cdp-forge/plugin-pipeline-es-output",
     "version": "1.0.0",
     "private": true,
     "main": "index.js",
@@ -12,8 +12,8 @@
     "author": "CDP Forge",
     "license": "GPL-3.0",
     "dependencies": {
+        "@cdp-forge/plugin-pipeline-sdk": "^1.1.4",
         "@elastic/elasticsearch": "^7.17.14",
-        "plugin-pipeline-sdk": "^1.1.3",
         "yaml": "^2.7.0"
     },
     "devDependencies": {

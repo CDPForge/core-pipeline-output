@@ -1,4 +1,4 @@
 plugin:
-  name: 'core-pipeline-output'
+  name: 'plugin-pipeline-es-output'
   priority: 100
   type: 'parallel'

@@ -1,5 +1,5 @@
 import { Client } from '@elastic/elasticsearch';
-import { PipelinePluginI, Log, Config } from 'plugin-pipeline-sdk';
+import { PipelinePluginI, Log, Config } from '@cdp-forge/plugin-pipeline-sdk';
 
 const prefixIndex = "users-logs-";
 
@@ -97,5 +97,4 @@ export default class EsIndexer implements PipelinePluginI{
   public async init(): Promise<void> {
     return Promise.resolve();
   }
-
 }
