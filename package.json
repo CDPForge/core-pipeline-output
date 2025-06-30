@@ -12,7 +12,7 @@
     "author": "CDP Forge",
     "license": "GPL-3.0",
     "dependencies": {
-        "@cdp-forge/plugin-pipeline-sdk": "^1.1.4",
+        "@cdp-forge/plugin-pipeline-sdk": "^1.1.5",
         "@elastic/elasticsearch": "^7.17.14",
         "yaml": "^2.7.0"
     },
