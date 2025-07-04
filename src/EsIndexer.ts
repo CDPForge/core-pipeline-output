@@ -5,9 +5,9 @@ const prefixIndex = "users-logs-";
 
 export default class EsIndexer implements PipelinePluginI{
   private client: Client;
-  private batchSize: number;
+  private readonly batchSize: number;
   private logs: Log[];
-  private timeout: number;
+  private readonly timeout: number;
   private timeoutId: NodeJS.Timeout | null;
   private isProcessing: boolean;
 
