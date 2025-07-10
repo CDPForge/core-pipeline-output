@@ -15,14 +15,14 @@
     "license": "GPL-3.0",
     "dependencies": {
         "@cdp-forge/plugin-pipeline-sdk": "^1.1.9",
-        "@elastic/elasticsearch": "^7.17.14",
+        "@opensearch-project/opensearch": "^3.5.1",
         "yaml": "^2.7.0"
     },
     "devDependencies": {
-        "@types/elasticsearch": "^5.0.43",
         "@types/jest": "^29.5.14",
         "@types/node": "^20.12.12",
         "jest": "^29.7.0",
+        "nodemon": "^3.1.10",
         "ts-jest": "^29.2.5",
         "typescript": "^5.7.3"
     }

@@ -1,5 +1,7 @@
-import { Client } from '@elastic/elasticsearch';
+import { Client } from '@opensearch-project/opensearch';
 import { PipelinePluginI, Log, Config } from '@cdp-forge/plugin-pipeline-sdk';
+import fs from "fs";
+import path from "path";
 
 const prefixIndex = "users-logs-";
 
@@ -21,6 +23,10 @@ export default class EsIndexer implements PipelinePluginI{
     this.client = new Client({
       node: esConfig.url,
       auth,
+      ssl: {
+        ca: fs.readFileSync(path.join(__dirname, '../certs/root-ca.pem')),
+        rejectUnauthorized: true
+      }
     });
 
     this.batchSize = batchSize;
