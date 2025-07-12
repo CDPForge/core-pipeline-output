@@ -1,6 +1,6 @@
 {
     "name": "@cdp-forge/plugin-pipeline-es-output",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "private": true,
     "main": "index.js",
     "scripts": {
