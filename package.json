@@ -13,7 +13,7 @@
     "author": "CDP Forge",
     "license": "GPL-3.0",
     "dependencies": {
-        "@cdp-forge/plugin-pipeline-sdk": "^1.1.16",
+        "@cdp-forge/plugin-pipeline-sdk": "^1.1.17",
         "@opensearch-project/opensearch": "^3.5.1"
     },
     "devDependencies": {
