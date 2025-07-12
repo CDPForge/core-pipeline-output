@@ -9,7 +9,7 @@
         "prestart": "npm run build",
         "dev": "nodemon --watch 'src/**' --ext 'ts,json' --exec 'npm run build && npm run start'",
         "build": "tsc",
-        "build_prod": "git push --tags",
+        "build_prod": "git push && git push --tags",
         "prebuild_prod": "npm version patch"
     },
     "author": "CDP Forge",
