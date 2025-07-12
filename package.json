@@ -8,15 +8,13 @@
         "start": "node dist/index.js",
         "prestart": "npm run build",
         "dev": "nodemon --watch 'src/**' --ext 'ts,json' --exec 'npm run build && npm run start'",
-        "build": "tsc",
-        "postbuild": "mkdir -p dist/config && cp ./config/plugin.yml ./dist/config/plugin.yml"
+        "build": "tsc"
     },
     "author": "CDP Forge",
     "license": "GPL-3.0",
     "dependencies": {
-        "@cdp-forge/plugin-pipeline-sdk": "^1.1.9",
-        "@opensearch-project/opensearch": "^3.5.1",
-        "yaml": "^2.7.0"
+        "@cdp-forge/plugin-pipeline-sdk": "^1.1.16",
+        "@opensearch-project/opensearch": "^3.5.1"
     },
     "devDependencies": {
         "@types/jest": "^29.5.14",

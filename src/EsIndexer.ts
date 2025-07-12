@@ -14,14 +14,13 @@ export default class EsIndexer implements PipelinePluginI{
   private isProcessing: boolean;
 
   constructor( config: Config, batchSize: number = 100, timeout: number = 500) {
-    const esConfig = config.esConfig;
-    
-    const auth = esConfig.username && esConfig.password
-      ? { username: esConfig.username, password: esConfig.password }
+
+    const auth = config.opensearch!.username && config.opensearch!.password
+      ? { username: config.opensearch!.username, password: config.opensearch!.password }
       : undefined;
 
     this.client = new Client({
-      node: esConfig.url,
+      node: config.opensearch!.url,
       auth,
       ssl: {
         ca: fs.readFileSync(path.join(__dirname, '../certs/root-ca.pem')),

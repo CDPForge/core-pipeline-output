@@ -1,8 +1,7 @@
-import path from 'path';
 import EsIndexer from './EsIndexer';
-import {Config, ConfigReader, start} from '@cdp-forge/plugin-pipeline-sdk'
+import {clusterConfig, start} from '@cdp-forge/plugin-pipeline-sdk'
+import pluginConfig from './config/plugin';
 
-const config: Config = ConfigReader.generate(path.join(__dirname, '../config/config.yml'),path.join(__dirname, '../config/plugin.yml'));
-const esIndexer = new EsIndexer(config);
+const esIndexer = new EsIndexer(clusterConfig);
 
-start(esIndexer, config)
+start(esIndexer, pluginConfig)

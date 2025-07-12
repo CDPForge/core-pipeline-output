@@ -14,7 +14,7 @@
   },
   "include": [
     "src/**/*",
-    "config/**/*"
+    "src/config/**/*"
   ],
   "exclude": [
     "node_modules",
